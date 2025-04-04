@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Saynet AG</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Saynet AG</h1>
+      <nav>
+        <ul>
+          <li><a href="#about">Über uns</a></li>
+          <li><a href="#services">Dienstleistungen</a></li>
+          <li><a href="#development">Entwicklung</a></li>
+          <li><a href="#contact">Kontakt</a></li>
+        </ul>
+      </nav>
+      <div class="language-switcher">
+        <button onclick="setLanguage('de')">DE</button>
+        <button onclick="setLanguage('en')">EN</button>
+      </div>
+    </div>
+  </header>
+
+  <section id="hero">
+    <div class="container">
+      <h2>Mit der IT in die Zukunft</h2>
+    </div>
+  </section>
+
+  <section id="about" class="content-section">
+    <div class="container">
+      <h2>Über uns</h2>
+      <p>Saynet AG ist ein führender Entwickler von IT-Plattformen und Anwendungen und bietet in der Schweiz umfassende IT-Dienstleistungen und Beratung an.</p>
+    </div>
+  </section>
+
+  <section id="services" class="content-section">
+    <div class="container">
+      <h2>Dienstleistungen</h2>
+      <ul>
+        <li>IT-Beratung</li>
+        <li>Systemintegration</li>
+        <li>Support und Wartung</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="development" class="content-section">
+    <div class="container">
+      <h2>Plattform- & App-Entwicklung</h2>
+      <p>Wir spezialisieren uns auf die Entwicklung maßgeschneiderter Plattformen und Anwendungen, die auf die spezifischen Bedürfnisse unserer Kunden zugeschnitten sind.</p>
+    </div>
+  </section>
+
+  <section id="contact" class="content-section">
+    <div class="container">
+      <h2>Kontakt</h2>
+      <p>Email: kontakt@saynet.ch</p>
+      <p>Telefon: +41 44 123 45 67</p>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Saynet AG. Alle Rechte vorbehalten.</p>
+    </div>
+  </footer>
+
+  <script>
+    function setLanguage(lang) {
+      const elements = document.querySelectorAll('[data-lang]');
+      elements.forEach(el => {
+        el.style.display = el.getAttribute('data-lang') === lang ? 'block' : 'none';
+      });
+    }
+    setLanguage('de'); // Standardmäßig Deutsch setzen
+  </script>
+</body>
+</html>
